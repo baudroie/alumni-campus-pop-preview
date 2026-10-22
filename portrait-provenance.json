@@ -1,0 +1,21 @@
+{
+  "method": "manual silhouette envelope + GrabCut alpha; no generative tools",
+  "source": "https://www.baudroie.jp/control/img/bg-int01-mv.jpg",
+  "source_size": [
+    1200,
+    500
+  ],
+  "native_cutout_size": [
+    1200,
+    500
+  ],
+  "crop_box": [
+    700,
+    0,
+    1200,
+    500
+  ],
+  "rgb_max_abs_diff": 0,
+  "upscale": "2x Lanczos interpolation only",
+  "source_sha256": "e122d008aa5eef3dd5d1f9fa73801e987df32f52b0ce5d6f0cfa6d74cca56012"
+}
