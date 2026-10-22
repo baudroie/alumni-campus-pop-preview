@@ -25,3 +25,35 @@
 .dialog-role-links{display:grid;gap:9px;margin-top:20px}.dialog-role-links a{border-bottom:1px solid var(--line);padding:10px 2px;font-weight:700;font-size:14px}.dialog-role-links a:hover{color:var(--orange)}
 @media(max-width:1100px) and (min-width:701px){.message-panel{padding:18px 16px}.message-panel h3{font-size:23px}.message-panel p{font-size:12px}.section-heading h2::after{width:78px}}
 @media(max-width:700px){.section-heading h2{padding-bottom:25px}.section-heading h2::after{width:88px;height:20px}.hero-heading::after{left:63%;bottom:-19px;width:90px;height:22px}.message-panel{padding:24px 20px;transform:rotate(-2deg)}.message-panel h3{font-size:25px}.message-panel p{font-size:14px;line-height:1.85}.next-section{padding-top:44px;padding-bottom:40px}.cta-mark-top{width:78px;height:24px;top:9px;left:auto;right:21px}.cta-mark-bottom{left:20px;bottom:8px;width:75px;height:20px}}
+
+/* Campus stationery: CSS backgrounds, readable notes and aligned story rails. */
+@font-face{font-family:Yomogi;src:url('./yomogi-note.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
+:root{--story-column:40%}
+body{background:#fffdf8}
+main{overflow:hidden}
+.hero{background:radial-gradient(ellipse at 4% 68%,#fff0d9 0,transparent 47%)}
+.profile,.career,.work,.environment,.faq{position:relative;isolation:isolate}
+.profile,.career{grid-template-columns:var(--story-column) minmax(0,1fr)}
+.profile::before,.career::before,.work::before,.environment::before,.faq::before{content:"";position:absolute;z-index:-1;pointer-events:none}
+.profile::before{inset:0 -36px;background:#fff1df;transform:rotate(-1deg);border-block:1px solid #ffd6ad}
+.career::before{width:260px;height:360px;left:-130px;top:180px;background:radial-gradient(circle,#ff541738 1.5px,transparent 2px) 0 0/13px 13px;transform:rotate(-12deg);border-radius:48%}
+.work::before{inset:10px -36px;background:#fff1df;transform:rotate(1deg)}
+.environment::before{width:310px;height:310px;right:-100px;bottom:0;border:35px solid #ffe3a6;border-radius:50%}
+.faq::before{width:170px;height:170px;left:-90px;top:10px;background:repeating-linear-gradient(135deg,#ffcbad 0 2px,transparent 2px 13px);transform:rotate(12deg)}
+.section-number{letter-spacing:.025em;font-kerning:none}
+.environment .section-number{letter-spacing:.04em}
+.hand-note{background:#fff3b4;border:2px solid var(--orange);box-shadow:6px 6px 0 #ffba80;padding:15px 18px;right:8%;top:18px;transform:rotate(4deg);font-size:20px;color:#b73710}
+.hand-note::before{content:"";position:absolute;left:23%;top:-10px;width:60%;height:19px;background:#ffda52d9;transform:rotate(-8deg)}
+.side-note{font-family:Yomogi,cursive;font-size:clamp(24px,2.4vw,34px);font-style:normal;font-weight:400;line-height:1.65;transform:rotate(-2deg);margin:40px 0 18px 12px;color:#d54214;max-width:390px;text-wrap:pretty}
+.career-icon{display:block;width:42px;height:42px;padding:7px;margin-bottom:8px;border:1px solid #ffb58f;background:#fff0dd;border-radius:12px;color:#d64716;box-shadow:3px 3px 0 #ffe0b7}
+.timeline-date>span{font-size:27px;letter-spacing:.02em}
+.timeline li{min-height:155px}
+.message{background-image:radial-gradient(circle,#ffffff28 1px,transparent 1.5px);background-size:16px 16px;padding-block:42px}
+.message-panel{position:relative;background:#fffdf2;border:1px solid #ffda9b;box-shadow:7px 8px 0 #b730144d;padding:32px 24px 27px;transform:rotate(-2deg)}
+.message-panel::before{content:"";position:absolute;top:-12px;left:32%;width:38%;height:25px;background:repeating-linear-gradient(45deg,#ffeb69 0 5px,#fff08b 5px 9px);transform:rotate(5deg)}
+.message-panel::after{content:"✳";position:absolute;right:12px;bottom:4px;font-size:34px;color:var(--orange);line-height:1}
+.message-kicker{display:block;font-family:Arial,sans-serif;font-size:10px;letter-spacing:.12em;font-weight:700;color:#bd4018;margin-bottom:13px}
+.message-panel h3 span{background:linear-gradient(transparent 62%,#ffe65b 62%,#ffe65b 94%,transparent 94%);box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.message-panel p:last-child{padding-bottom:13px}
+@media(min-width:701px) and (max-width:1100px){.hand-note{font-size:15px;right:8%;padding:12px}.side-note{font-size:25px;margin-left:0}.environment .section-heading{gap:10px}.environment .section-number{font-size:85px}.message-panel{padding:30px 16px 24px}.message-kicker{font-size:8px}}
+@media(max-width:700px){.profile::before,.work::before{left:-18px;right:-18px}.profile-content{border-left:2px solid var(--orange);margin-left:5px;padding-left:18px}.hand-note{font-size:clamp(13px,3.5vw,20px);right:4%;top:10px;padding:10px 12px;box-shadow:4px 4px 0 #ffba80}.hand-note::before{height:15px;top:-8px}.side-note{display:block;order:0;font-size:27px;line-height:1.6;max-width:310px;margin:16px auto 24px;transform:rotate(-2deg)}.career::before{left:-150px;top:150px}.career-icon{width:35px;height:35px;padding:5px;border-radius:10px}.timeline-date>span{font-size:24px}.timeline li{min-height:0}.section-number,.environment .section-number{letter-spacing:.025em}.environment::before{width:190px;height:190px;right:-80px;border-width:24px}.message{padding-block:30px}.message-panel{padding:32px 22px 28px}.message-copy{margin-top:8px}.message-kicker{font-size:10px}}

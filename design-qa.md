@@ -29,3 +29,12 @@ Fonts/typography, responsive spacing, visual tokens, image quality at rendered s
 - Source-image review and source-code comparison performed. Native text, section order, portrait, three photographs, three supporting illustrations and numbered timeline retained.
 - Remaining difference: source hero portrait was generated; production intentionally uses the official photograph. Original 01/02 caption layout retained.
 - Browser-rendered comparison is still blocked: browser tool absent. Fonts, spacing, image framing and breakpoints cannot be declared visually passed.
+
+## 2026-10-22 background and timeline refinement
+- Inspected both supplied screenshots: profile/timeline rail offset and overlapping 04 digits confirmed.
+- Both desktop rails now share a 40% grid track; mobile rails share a 5px inset and 2px border.
+- Added CSS stationery backgrounds, visible hero note border/tape/shadow, and decorated message card.
+- Added six inline SVG career icons; removed the requested career disclaimer.
+- Replaced the slanted sans-serif career note with locally served Yomogi (OFL license included, character subset).
+- Increased section-number spacing to prevent the 04 overlap.
+- Static asset, character-coverage and HTML checks passed. Browser rendering remains unavailable; no rendered visual pass is claimed.
