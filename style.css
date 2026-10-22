@@ -179,3 +179,7 @@ html{scroll-padding-top:calc(var(--header-height) + 16px)}
   button:hover,.pill:hover,.next-actions .orange-pill:hover{transform:none}
   .pill:hover .arrow img{translate:none}
 }
+
+/* Keep the existing button layout when consultation actions are native links. */
+a.text-button{width:max-content;max-width:100%;text-align:center}
+.mobile-menu a[data-consult]{border:0;color:var(--orange)}
