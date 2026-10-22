@@ -188,3 +188,7 @@ a.text-button{width:max-content;max-width:100%;text-align:center}
 /* Shallow organic group photo crop: keep every face and reduce wall/floor. */
 .environment .game-photo{height:auto;margin-inline:auto;aspect-ratio:2.32;border-radius:34% 16% 30% 12% / 24% 30% 18% 24%;overflow:hidden}
 .environment .game-photo img{width:100%;height:100%;object-fit:cover;object-position:center 64%}
+
+/* Two-line hero: scale the complete second row without changing individual glyphs. */
+.master-hero-title .hero-line-finish{display:flex;align-items:baseline;width:max-content;gap:.15em;font-size:.74em}
+.master-hero-title .hero-line-finish .hero-line{margin:0}
