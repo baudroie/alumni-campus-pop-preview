@@ -87,7 +87,7 @@ main{overflow:hidden}
 /* Master typography: individual glyph scale, baseline and angle. */
 .display-art{display:block}
 .display-glyph{display:inline-block;flex:none;font-size:calc(var(--size)*1em);line-height:1;letter-spacing:-.055em;transform:translateY(var(--rise)) rotate(var(--tilt));transform-origin:50% 75%}
-.hero h1.master-hero-title{font-size:clamp(42px,6.4vw,92px);font-weight:900;line-height:1;letter-spacing:0;transform:rotate(-6.5deg);transform-origin:left center;-webkit-text-stroke:.018em currentColor}
+.hero h1.master-hero-title{font-size:clamp(42px,6.4vw,92px);font-weight:900;line-height:1;letter-spacing:0;transform:rotate(-6.5deg);transform-origin:left center;-webkit-text-stroke:.03em currentColor}
 .master-hero-title .hero-line{display:flex;align-items:baseline;white-space:nowrap;width:max-content;line-height:1}
 .master-hero-title .hero-line-1{margin-bottom:.09em}
 .master-hero-title .hero-line-2{margin-left:-.025em;margin-bottom:.085em}
@@ -96,13 +96,16 @@ main{overflow:hidden}
 .hero h1.master-hero-title .campus-word{transform:rotate(-.8deg)}
 .hero h1.master-hero-title .self-word{padding:.035em .085em .055em;margin-right:.10em;transform:rotate(-1deg)}
 .next-heading{container-type:inline-size}
-.next-inner h2.master-cta-title{font-size:clamp(28px,10.65cqi,78px);line-height:1;letter-spacing:0;transform:rotate(-4deg);transform-origin:left center;-webkit-text-stroke:.022em currentColor}
+.next-inner h2.master-cta-title{font-size:clamp(28px,10.65cqi,78px);line-height:1;letter-spacing:0;transform:rotate(-4deg);transform-origin:left center;-webkit-text-stroke:.03em currentColor}
 .master-cta-title .display-art{background:none}
 .master-cta-title .cta-title-line{display:flex;align-items:baseline;white-space:nowrap;line-height:1;background:none;width:max-content}
 .master-cta-title .cta-title-line-1{margin-bottom:.035em}
 .master-cta-title .cta-title-line-2{margin-left:-.035em}
 .next-inner h2.master-cta-title span{background:none}
 @media(max-width:700px){
- .hero h1.master-hero-title{font-size:clamp(30px,10.3vw,70px);transform:rotate(-6.5deg);margin-top:3px;margin-bottom:4px}
+ .hero h1.master-hero-title{font-size:clamp(30px,11.7vw,80px);transform:rotate(-6.5deg) scaleX(.92);margin-top:3px;margin-bottom:4px}
  .next-inner h2.master-cta-title{font-size:10.65cqi;margin-bottom:32px}
 }
+
+.cta-title-line-1 .display-glyph:nth-child(3){margin-right:-.23em}
+@media(max-width:700px){.master-hero-title .self-word .display-glyph{font-size:1.4em}}
