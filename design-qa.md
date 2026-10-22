@@ -19,3 +19,13 @@ Implementation screenshot: unavailable — browser control tools are not exposed
 
 ## Outstanding gate
 Fonts/typography, responsive spacing, visual tokens, image quality at rendered sizes, copy wrapping, primary interactions and console must still be checked in a connected browser. No screenshot-based pass or complete visual fidelity is claimed.
+
+## 2026-10-22 editorial and decoration update
+- Removed visible source captions and preparation notes throughout.
+- Replaced the quotation panel with editorial third-person copy based on the official interview (https://www.baudroie.jp/recruit/interview/interview01/). No newly invented words are attributed as a direct quotation.
+- Restored yellow hand-drawn-style accents under headings and orange CTA marks seen in the master; implemented using CSS.
+- Added a restrained dot pattern and outline rings to the CTA backdrop.
+- Replaced the pending consultation dialog text with working links to the three existing role pages.
+- Source-image review and source-code comparison performed. Native text, section order, portrait, three photographs, three supporting illustrations and numbered timeline retained.
+- Remaining difference: source hero portrait was generated; production intentionally uses the official photograph. Original 01/02 caption layout retained.
+- Browser-rendered comparison is still blocked: browser tool absent. Fonts, spacing, image framing and breakpoints cannot be declared visually passed.
