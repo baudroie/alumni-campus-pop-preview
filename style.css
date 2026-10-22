@@ -86,12 +86,13 @@ main{overflow:hidden}
 
 /* Master typography: individual glyph scale, baseline and angle. */
 .display-art{display:block}
+.master-hero-title .display-art{width:max-content}
 .display-glyph{display:inline-block;flex:none;font-size:calc(var(--size)*1em);line-height:1;letter-spacing:-.055em;transform:translateY(var(--rise)) rotate(var(--tilt));transform-origin:50% 75%}
 .hero h1.master-hero-title{font-size:clamp(42px,6.4vw,92px);font-weight:900;line-height:1;letter-spacing:0;transform:rotate(-6.5deg);transform-origin:left center;-webkit-text-stroke:.03em currentColor}
 .master-hero-title .hero-line{display:flex;align-items:baseline;white-space:nowrap;width:max-content;line-height:1}
 .master-hero-title .hero-line-1{margin-bottom:.09em}
 .master-hero-title .hero-line-2{margin-left:-.025em;margin-bottom:.085em}
-.master-hero-title .hero-line-3{margin-left:-.045em}
+.master-hero-title .hero-line-3{margin-left:auto;margin-right:0}
 .hero h1.master-hero-title em{display:inline-flex;align-items:baseline;gap:0;padding:.055em .075em .08em;margin:0 .04em;line-height:1;letter-spacing:0}
 .hero h1.master-hero-title .campus-word{transform:rotate(-.8deg)}
 .hero h1.master-hero-title .self-word{padding:.035em .085em .055em;margin-right:.10em;transform:rotate(-1deg)}
