@@ -1,5 +1,5 @@
 {
-  "method": "manual silhouette envelope + GrabCut alpha; no generative tools",
+  "method": "manual silhouette + GrabCut; protected solid face/neck alpha; enclosed holes filled; no generative tools",
   "source": "https://www.baudroie.jp/control/img/bg-int01-mv.jpg",
   "source_size": [
     1200,
@@ -17,5 +17,7 @@
   ],
   "rgb_max_abs_diff": 0,
   "upscale": "2x Lanczos interpolation only",
-  "source_sha256": "e122d008aa5eef3dd5d1f9fa73801e987df32f52b0ce5d6f0cfa6d74cca56012"
+  "source_sha256": "e122d008aa5eef3dd5d1f9fa73801e987df32f52b0ce5d6f0cfa6d74cca56012",
+  "face_interior_alpha_min": 255,
+  "face_interior_transparent_pixels": 0
 }
