@@ -34,3 +34,55 @@ dialog.addEventListener('close', () => {
   if (dialogTrigger && menu.contains(dialogTrigger)) menuToggle.focus();
   else dialogTrigger?.focus();
 });
+
+// Progressive enhancement: content stays visible until its one-shot animation starts.
+(() => {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reducedMotion.matches || !('IntersectionObserver' in window)) return;
+  const targets = [...document.querySelectorAll(
+    '.hero-heading, .cta-conversation, .cta-sun, .cta-orbit'
+  )];
+  const visible = new Set();
+  function sync(target) {
+    if (target.dataset.motionState === 'done') return;
+    const playing = visible.has(target) && !document.hidden;
+    const art = target.querySelector('.cta-conversation-art');
+    // A lazy-loaded illustration must be ready before its entrance begins.
+    if (playing && (!art || art.complete)) target.dataset.motionState = 'running';
+    target.style.setProperty('--motion-play', playing ? 'running' : 'paused');
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) visible.add(entry.target);
+      else visible.delete(entry.target);
+      sync(entry.target);
+    });
+  }, { rootMargin: '-86px 0px 0px 0px', threshold: 0.1 });
+  function onVisibilityChange() { targets.forEach(sync); }
+  function finish(target) {
+    target.dataset.motionState = 'done';
+    target.style.removeProperty('--motion-play');
+    visible.delete(target);
+    observer.unobserve(target);
+    if (targets.every(item => item.dataset.motionState === 'done')) {
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+    }
+  }
+  targets.forEach(target => {
+    target.addEventListener('animationend', () => {
+      if (target.getAnimations({ subtree: true }).every(animation => animation.playState === 'finished')) {
+        finish(target);
+      }
+    });
+    const art = target.querySelector('.cta-conversation-art');
+    if (art && !art.complete) {
+      art.addEventListener('load', () => sync(target), { once: true });
+      art.addEventListener('error', () => sync(target), { once: true });
+    }
+    observer.observe(target);
+  });
+  document.addEventListener('visibilitychange', onVisibilityChange);
+  reducedMotion.addEventListener('change', event => {
+    if (event.matches) targets.forEach(finish);
+  });
+})();
