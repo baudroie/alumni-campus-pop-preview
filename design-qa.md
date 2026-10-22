@@ -38,3 +38,11 @@ Fonts/typography, responsive spacing, visual tokens, image quality at rendered s
 - Replaced the slanted sans-serif career note with locally served Yomogi (OFL license included, character subset).
 - Increased section-number spacing to prevent the 04 overlap.
 - Static asset, character-coverage and HTML checks passed. Browser rendering remains unavailable; no rendered visual pass is claimed.
+
+## 2026-10-22 second refinement
+- Viewed original game-club photograph and existing team illustration. Removed fixed photo height/aspect ratio; image now retains all original content at every breakpoint.
+- Career note uses exactly two nonwrapping spans and 1.3 line height with container-responsive handwriting size.
+- Replaced six small framed line icons with unframed black-outline/orange/white editorial pictograms.
+- Removed optional-club-participation note; enlarged only the emphasized message phrase.
+- Rebuilt CTA decoration with orange burst, dashed orbit, yellow curved arrow, oversized edge rings, eyebrow label and white offset button shadow.
+- Static checks pass; browser rendering is still unavailable and has not been represented as completed.
