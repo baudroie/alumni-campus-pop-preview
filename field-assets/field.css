@@ -1,0 +1,15 @@
+/* Subject variants of the approved university LP. */
+.field-science .ribbon-face{fill:#24658a}
+.field-science .ribbon-tail{fill:#1d5575}
+.field-science .ribbon-fold{fill:#153c54}
+.field-humanities .ribbon-face{fill:#a34d40}
+.field-humanities .ribbon-tail{fill:#8d4035}
+.field-humanities .ribbon-fold{fill:#632e26}
+.ribbon-curved-university{font-size:64px}
+.ribbon-curved-eligibility{font-size:48px}
+.campus-art img{scale:1}
+.campus-art figcaption{top:-3%;left:15%;white-space:nowrap;font-family:Noto,'Hiragino Kaku Gothic ProN',Meiryo,sans-serif;font-size:17px}
+@media(min-width:801px){.campus-art{left:0;bottom:4px;width:34%;max-width:520px}}
+@media(max-width:800px){.campus-art{left:0;bottom:0;width:62%}.campus-art figcaption{font-size:15px;left:8%}}
+@media(max-width:600px){.campus-art figcaption{font-size:12px;left:10%}}
+@media(max-width:359px){.campus-art figcaption{font-size:11px}}
